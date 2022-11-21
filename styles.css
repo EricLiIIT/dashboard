@@ -1,0 +1,279 @@
+* {
+  font-family: "Edu QLD Beginner", cursive;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --blue-accent: #1992d4;
+  --blank-space: #e2e8f0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1.2fr 6fr;
+  grid-template-rows: 1fr 6fr;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  margin-left: 5px;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  align-items: center;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.header {
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.5rem;
+  align-items: center;
+  grid-row: 1;
+  grid-column: 2 / 3;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+}
+
+.header-top-right {
+  display: flex;
+  flex: 0.2;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-bottom-left {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.greeting {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.user {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.actions {
+  margin-right: 1rem;
+}
+
+.actions > button {
+  background-color: var(--blue-accent);
+  border-style: none;
+  border-radius: 20px;
+  color: white;
+  width: 100px;
+  height: 40px;
+  margin-left: 1rem;
+}
+
+.search-container {
+  display: flex;
+  padding-left: 1rem;
+  flex: 1;
+  grid-template-rows: 1fr;
+  align-items: center;
+  grid-auto-flow: column;
+}
+
+#search {
+  width: 50%;
+  height: 30px;
+  margin-left: 1rem;
+  border-style: none;
+  border-radius: 15px;
+  background-color: var(--blank-space);
+}
+
+.name {
+  justify-self: end;
+}
+
+.header-bottom {
+  grid-template-columns: 1fr 0.8fr;
+  grid-row: 2 / 3;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.egg {
+  display: grid;
+  justify-content: center;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr;
+  background-color: var(--blue-accent);
+  grid-row: 1 / 3;
+  grid-column: 1;
+  padding: 1em;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.nav ul:nth-child(2) {
+  display: grid;
+  align-content: end;
+}
+
+.main-content {
+  display: grid;
+  background-color: var(--blank-space);
+  grid-template-columns: 1fr 0.3fr;
+  gap: 2rem;
+  padding: 2rem;
+  overflow: auto;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  background-color: white;
+  justify-items: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 0 0 0 10px;
+  border-radius: 10px;
+  border-color: #f0b429;
+  padding: 1rem;
+}
+
+.details {
+  grid-column: 1/3;
+}
+
+.details > p:first-child {
+  font-weight: bold;
+}
+
+.details > p:nth-child(2) {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.main-content-right {
+  display: grid;
+  grid-template-rows: 0.1fr 1fr 0.1fr 1fr;
+}
+
+.options {
+  display: grid;
+  justify-self: right;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 2;
+  align-self: flex-end;
+}
+
+.options > * {
+  display: grid;
+  justify-content: center;
+}
+
+.announcements {
+  display: grid;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  align-content: center;
+  margin-bottom: 2rem;
+}
+
+.announcements > ul > li {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 0.8em;
+  color: grey;
+  margin-bottom: 0;
+}
+
+.announcements > ul > li:nth-child(2) {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px 0 2px 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.announcements > ul > li:nth-child(1) {
+  padding-bottom: 1rem;
+}
+
+.announcements > ul > li:nth-child(3) {
+  padding-top: 1rem;
+}
+
+.announcement-title {
+  font-weight: bold;
+  color: black;
+}
+
+.trending {
+  display: grid;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  align-content: center;
+  margin-bottom: 2rem;
+}
+
+.trending > * {
+  display: grid;
+  gap: 1rem;
+}
+
+.trending > ul > li {
+  font-size: 0.8rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.user-desc {
+  color: grey;
+}
